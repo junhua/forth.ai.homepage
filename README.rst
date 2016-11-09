@@ -1,14 +1,9 @@
-###############
-django CMS demo
-###############
+************
+django CMS
+************
 
-|Build Status| |Coverage Status| |Code Climate| |Requirements Status|
-
-|Browser Matrix|
-
-The aim of this project is to run django CMS with standard configurations
-including recommended addons and best practices. You can use this repository for
-tutorial, debugging, development and research purposes.
+Django CMS with standard configurations
+including recommended addons and best practices. 
 
 The setup process will automatically pull the `Explorer Theme
 <https://github.com/divio/django-cms-explorer>`_ files into the project to
@@ -27,6 +22,8 @@ There are also additional **recommended addons** available:
 - `Aldryn Bootstrap 3 <https://github.com/aldryn/aldryn-bootstrap3>`_
 - `Aldryn Forms <https://github.com/aldryn/aldryn-forms>`_
 - `Aldryn Style <https://github.com/aldryn/aldryn-style>`_
+
+Temp disabled
 - `Aldryn Locations <https://github.com/aldryn/aldryn-locations>`_
 
 
@@ -34,15 +31,24 @@ There are also additional **recommended addons** available:
 Installation
 ************
 
-Virtualenv
-----------
 
-- run ``make install`` to get started
-- run ``make run`` to start the development server
-- run ``make update`` to update the project
-  (this will not load new static files from the Aldryn site)
 
 Docker
+------
+
+For development setup, run the following:
+
+1. First time setup: create env by  
+`docker-machine create --driver virtualbox homepage`
+1. `eval $(docker-machine env homepage)`
+1. `docker-compose build`
+1. `docker-compose up -d`
+1. `docker-compose run web python manage.py migrate --noinput --no-initial-data`
+1. `docker-compose run web python manage.py migrate --noinput`
+
+
+
+Make
 ------
 
 - run ``make docker`` which sets the docker image up and runs it in the background
@@ -58,15 +64,3 @@ You can login to the cms by appending ``/?edit`` to the url. The credentials are
 
 - Username: **admin**
 - Password: **admin**
-
-
-.. |Build Status| image:: https://travis-ci.org/divio/django-cms-demo.svg?branch=master
-   :target: https://travis-ci.org/divio/django-cms-demo
-.. |Coverage Status| image:: https://codeclimate.com/github/divio/django-cms-demo/badges/coverage.svg
-   :target: https://codeclimate.com/github/divio/django-cms-demo/coverage
-.. |Code Climate| image:: https://codeclimate.com/github/divio/django-cms-demo/badges/gpa.svg
-   :target: https://codeclimate.com/github/divio/django-cms-demo
-.. |Requirements Status| image:: https://requires.io/github/divio/django-cms-demo/requirements.svg?branch=master
-   :target: https://requires.io/github/divio/django-cms-demo/requirements/?branch=master
-.. |Browser Matrix| image:: https://saucelabs.com/browser-matrix/django-cms-demo.svg
-   :target: https://saucelabs.com/u/django-cms-demo
