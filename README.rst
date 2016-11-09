@@ -38,13 +38,13 @@ Docker
 
 For development setup, run the following:
 
-1. First time setup: create env by  
+1.First time setup: create env by  
 `docker-machine create --driver virtualbox homepage`
-1. `eval $(docker-machine env homepage)`
-1. `docker-compose build`
-1. `docker-compose up -d`
-1. `docker-compose run web python manage.py migrate --noinput --no-initial-data`
-1. `docker-compose run web python manage.py migrate --noinput`
+1.`eval $(docker-machine env homepage)`
+1.`docker-compose build`
+1.`docker-compose up -d`
+1.`docker-compose run web python manage.py migrate --noinput --no-initial-data`
+1.`docker-compose run web python manage.py migrate --noinput`
 
 
 
