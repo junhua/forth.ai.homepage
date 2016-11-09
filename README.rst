@@ -22,9 +22,7 @@ There are also additional **recommended addons** available:
 - `Aldryn Bootstrap 3 <https://github.com/aldryn/aldryn-bootstrap3>`_
 - `Aldryn Forms <https://github.com/aldryn/aldryn-forms>`_
 - `Aldryn Style <https://github.com/aldryn/aldryn-style>`_
-
-Temp disabled
-- `Aldryn Locations <https://github.com/aldryn/aldryn-locations>`_
+- `Aldryn Locations <https://github.com/aldryn/aldryn-locations>`_ (Temp disabled)
 
 
 ************
