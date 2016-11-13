@@ -11,6 +11,7 @@ web:
         - ./homepage:/project
 
 postgres:
+    restart: always
     image: postgres:latest
     volumes_from:
         - data
@@ -18,5 +19,5 @@ postgres:
 data:
     image: postgres:latest
     volumes:
-        - /var/lib/postgresql
+        - .:/var/lib/postgresql
     command: "true"
