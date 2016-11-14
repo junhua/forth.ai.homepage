@@ -8,7 +8,7 @@ web:
     ports:
         - 8000:80
     volumes:
-        - ./homepage:/project
+        - /project
 
 postgres:
     restart: always
@@ -19,5 +19,5 @@ postgres:
 data:
     image: postgres:latest
     volumes:
-        - .:/var/lib/postgresql
+        - /var/lib/postgresql
     command: "true"
