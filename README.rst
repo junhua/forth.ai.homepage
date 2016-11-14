@@ -35,14 +35,14 @@ Docker
 ------
 
 For development setup, run the following:
+1.`sudo chown postgres:postgres ./data`
 
 1.First time setup: create env by  
 `docker-machine create --driver virtualbox homepage`
 1.`eval $(docker-machine env homepage)`
 1.`docker-compose build`
 1.`docker-compose up -d`
-1.`docker-compose run web python manage.py migrate --noinput --no-initial-data`
-1.`docker-compose run web python manage.py migrate --noinput`
+1.`docker-compose run web python /project/mysite/manage.py migrate`
 
 
 
@@ -62,3 +62,13 @@ You can login to the cms by appending ``/?edit`` to the url. The credentials are
 
 - Username: **admin**
 - Password: **admin**
+
+
+*****
+Alteration
+*****
+Change for specific setting and addons for DjangoCMS latest version:
+- Make a new Dockerfile at homepage folder
+- Modify the docker-compose.yml:  
+change web service build dir to ./homepage
+- Add data folder from postgres container volumn
